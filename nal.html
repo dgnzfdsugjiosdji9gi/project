@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Methods Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      text-align: center;
+      padding: 30px;
+    }
+    h2 {
+      color: black;
+    }
+    #output {
+      margin: 20px auto;
+      padding: 15px;
+      width: 60%;
+      border: 2px solid lightgreen;
+      border-radius: 10px;
+      background: whitesmoke;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: green;
+      color: white;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <h2>Array Methods</h2>
+  
+  <div id="output">Array: Apple, Banana, Cherry</div>
+  
+  <button onclick="addEnd()">Push (Add Mango)</button>
+  <button onclick="removeEnd()">Pop (Remove Last)</button>
+  <button onclick="addStart()">Unshift (Add Orange)</button>
+  <button onclick="removeStart()">Shift (Remove First)</button>
+
+  <script>
+    let fruits = ["Apple", "Banana", "Cherry"];
+    
+    function showArray() {
+      document.getElementById("output").innerHTML = "Array: " + fruits.join(", ");
+    }
+
+    function addEnd() {
+      fruits.push("Mango");
+      showArray();
+    }
+
+    function removeEnd() {
+      fruits.pop();
+      showArray();
+    }
+
+    function addStart() {
+      fruits.unshift("Orange");
+      showArray();
+    }
+
+    function removeStart() {
+      fruits.shift();
+      showArray();
+    }
+  </script>
+</body>
+</html>
